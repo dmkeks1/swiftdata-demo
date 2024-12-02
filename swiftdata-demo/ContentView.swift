@@ -6,8 +6,12 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct ContentView: View {
+    
+    @Environment(\.modelContext) private var context // private because only used in this view
+    
     var body: some View {
         VStack {
             Image(systemName: "globe")
